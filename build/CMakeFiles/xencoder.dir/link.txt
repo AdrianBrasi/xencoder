@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/xencoder.dir/link.d CMakeFiles/xencoder.dir/src/main.cpp.o CMakeFiles/xencoder.dir/src/platform.cpp.o -o xencoder  -Wl,-rpath,/home/brasi/projects/xencoder/build libSDL3_ttf.so.0.3.0 libSDL3.so.0.3.0
