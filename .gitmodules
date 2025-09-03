@@ -1,0 +1,12 @@
+[submodule "external/SDL"]
+	path = external/SDL
+	url = git@github.com:libsdl-org/SDL
+[submodule "external/SDL_image"]
+	path = external/SDL_image
+	url = git@github.com:libsdl-org/SDL_image
+[submodule "external/SDL_ttf"]
+	path = external/SDL_ttf
+	url = git@github.com:libsdl-org/SDL_ttf
+[submodule "external/imgui"]
+	path = external/imgui
+	url = git@github.com:ocornut/imgui
