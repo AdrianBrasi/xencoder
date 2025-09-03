@@ -1,9 +1,9 @@
 CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /home/brasi/projects/xencoder/src/platform.cpp \
  /usr/include/stdc-predef.h /home/brasi/projects/xencoder/src/platform.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_stdinc.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_platform_defines.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_stdinc.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_platform_defines.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
@@ -22,65 +22,65 @@ CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_begin_code.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_close_code.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_assert.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_asyncio.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_atomic.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_audio.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_endian.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_begin_code.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_close_code.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_assert.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_asyncio.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_atomic.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_audio.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_endian.h \
  /usr/include/endian.h /usr/include/bits/endian.h \
  /usr/include/bits/endianness.h /usr/include/bits/byteswap.h \
  /usr/include/bits/uintn-identity.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_error.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_mutex.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_thread.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_properties.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_iostream.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_bits.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_blendmode.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_camera.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_pixels.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_surface.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_rect.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_clipboard.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_cpuinfo.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_dialog.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_video.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_events.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_gamepad.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_guid.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_joystick.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_power.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_sensor.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_keyboard.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_keycode.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_scancode.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_mouse.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_pen.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_touch.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_filesystem.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_gpu.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_haptic.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_hidapi.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_hints.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_init.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_loadso.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_locale.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_log.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_messagebox.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_metal.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_misc.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_platform.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_process.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_render.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_storage.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_system.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_time.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_timer.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_tray.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_version.h \
- /home/brasi/projects/xencoder/vendored/SDL/include/SDL3/SDL_oldnames.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_error.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_mutex.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_thread.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_properties.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_iostream.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_bits.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_blendmode.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_camera.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_pixels.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_surface.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_rect.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_clipboard.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_cpuinfo.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_dialog.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_video.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_events.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_gamepad.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_guid.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_joystick.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_power.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_sensor.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_keyboard.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_keycode.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_scancode.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_mouse.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_pen.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_touch.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_filesystem.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_gpu.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_haptic.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_hidapi.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_hints.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_init.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_loadso.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_locale.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_log.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_messagebox.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_metal.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_misc.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_platform.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_process.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_render.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_storage.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_system.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_time.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_timer.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_tray.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_version.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_oldnames.h \
  /usr/include/c++/15.2.1/fstream \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -218,7 +218,14 @@ CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
- /home/brasi/projects/xencoder/src/json.hpp \
+ /home/brasi/projects/xencoder/external/imgui/imgui.h \
+ /home/brasi/projects/xencoder/external/imgui/imconfig.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
+ /usr/include/assert.h \
+ /home/brasi/projects/xencoder/external/imgui/backends/imgui_impl_sdl3.h \
+ /home/brasi/projects/xencoder/external/imgui/backends/imgui_impl_sdlrenderer3.h \
+ /home/brasi/projects/xencoder/external/imgui/backends/imgui_impl_metal.h \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/json.hpp \
  /usr/include/c++/15.2.1/algorithm \
  /usr/include/c++/15.2.1/bits/stl_algo.h \
  /usr/include/c++/15.2.1/bits/algorithmfwd.h \
@@ -276,6 +283,9 @@ CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.2.1/utility \
  /usr/include/c++/15.2.1/bits/stl_relops.h \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/adl_serializer.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/abi_macros.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/conversions/from_json.hpp \
  /usr/include/c++/15.2.1/forward_list \
  /usr/include/c++/15.2.1/bits/forward_list.h \
  /usr/include/c++/15.2.1/bits/forward_list.tcc \
@@ -311,8 +321,25 @@ CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /usr/include/c++/15.2.1/bits/gslice_array.h \
  /usr/include/c++/15.2.1/bits/mask_array.h \
  /usr/include/c++/15.2.1/bits/indirect_array.h \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/exceptions.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/value_t.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/macro_scope.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/detected.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/void_t.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/thirdparty/hedley/hedley.hpp \
  /usr/include/c++/15.2.1/version /usr/include/c++/15.2.1/cassert \
- /usr/include/assert.h /usr/include/c++/15.2.1/cstring \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/string_escape.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/position_t.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/json_fwd.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/string_concat.hpp \
+ /usr/include/c++/15.2.1/cstring \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/std_fs.hpp \
  /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
  /usr/include/c++/15.2.1/bits/chrono.h /usr/include/c++/15.2.1/ratio \
  /usr/include/c++/15.2.1/ctime \
@@ -329,8 +356,34 @@ CMakeFiles/xencoder.dir/src/platform.cpp.o: \
  /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
  /usr/include/c++/15.2.1/codecvt /usr/include/c++/15.2.1/bits/fs_dir.h \
  /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/c++/15.2.1/optional \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/conversions/to_json.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/iteration_proxy.hpp \
  /usr/include/c++/15.2.1/ranges /usr/include/c++/15.2.1/span \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/string_utils.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/hash.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/input_adapters.hpp \
  /usr/include/c++/15.2.1/numeric \
  /usr/include/c++/15.2.1/bits/stl_numeric.h \
  /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
- /usr/include/c++/15.2.1/any /usr/include/c++/15.2.1/iostream
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/json_sax.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/lexer.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/input/parser.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/json_custom_base_class.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/json_pointer.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/json_ref.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/output/serializer.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/ordered_map.hpp \
+ /usr/include/c++/15.2.1/any \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/detail/macro_unscope.hpp \
+ /home/brasi/projects/xencoder/external/nlohmann_json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /usr/include/c++/15.2.1/iostream

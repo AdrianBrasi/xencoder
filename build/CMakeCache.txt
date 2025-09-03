@@ -296,24 +296,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Enable to build RPM source packages
-CPACK_SOURCE_RPM:BOOL=OFF
-
-//Enable to build TBZ2 source packages
-CPACK_SOURCE_TBZ2:BOOL=ON
-
-//Enable to build TGZ source packages
-CPACK_SOURCE_TGZ:BOOL=ON
-
-//Enable to build TXZ source packages
-CPACK_SOURCE_TXZ:BOOL=ON
-
-//Enable to build TZ source packages
-CPACK_SOURCE_TZ:BOOL=ON
-
-//Enable to build ZIP source packages
-CPACK_SOURCE_ZIP:BOOL=OFF
-
 //Path to a library.
 DECOR_0_LIB:FILEPATH=/usr/lib/libdecor-0.so
 
@@ -332,28 +314,6 @@ FREETYPE_LIBRARY_DEBUG:FILEPATH=FREETYPE_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 FREETYPE_LIBRARY_RELEASE:FILEPATH=/usr/lib/libfreetype.so
 
-//Disable support of compressed WOFF2 fonts.
-FT_DISABLE_BROTLI:BOOL=ON
-
-//Disable support of bzip2 compressed fonts.
-FT_DISABLE_BZIP2:BOOL=ON
-
-//Disable HarfBuzz (used for improving auto-hinting of OpenType
-// fonts).
-FT_DISABLE_HARFBUZZ:BOOL=OFF
-
-//Disable support of PNG compressed OpenType embedded bitmaps.
-FT_DISABLE_PNG:BOOL=ON
-
-//Disable use of system zlib and use internal zlib library instead.
-FT_DISABLE_ZLIB:BOOL=ON
-
-//Enable support for meaningful error descriptions.
-FT_ENABLE_ERROR_STRINGS:BOOL=OFF
-
-//Require HarfBuzz for improving auto-hinting of OpenType fonts.
-FT_REQUIRE_HARFBUZZ:BOOL=ON
-
 //Path to a file.
 Fontconfig_INCLUDE_DIR:PATH=/usr/include
 
@@ -365,18 +325,6 @@ GBM_LIB:FILEPATH=/usr/lib/libgbm.so
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
-
-//FT_Done_MM_Var
-HAVE_FT_DONE_MM_VAR:BOOL=1
-
-//FT_Get_Transform
-HAVE_FT_GET_TRANSFORM:BOOL=1
-
-//FT_Get_Var_Blend_Coordinates
-HAVE_FT_GET_VAR_BLEND_COORDINATES:BOOL=1
-
-//FT_Set_Var_Blend_Coordinates
-HAVE_FT_SET_VAR_BLEND_COORDINATES:BOOL=1
 
 //Path to a file.
 HAVE_LIBURING_H:PATH=/usr/include
@@ -414,36 +362,41 @@ HAVE_XSYNC_H:FILEPATH=/usr/include/X11/extensions/sync.h
 //Path to a file.
 HAVE_XTEST_H:FILEPATH=/usr/include/X11/extensions/XTest.h
 
-//Build harfbuzz-subset
-HB_BUILD_SUBSET:BOOL=OFF
-
-//Build harfbuzz utils, needs cairo, freetype, and glib properly
-// be installed
-HB_BUILD_UTILS:BOOL=OFF
-
-//Enable cairo interop helpers
-HB_HAVE_CAIRO:BOOL=OFF
-
-//Enable freetype interop helpers
-HB_HAVE_FREETYPE:BOOL=ON
-
-//Enable glib unicode functions
-HB_HAVE_GLIB:BOOL=OFF
-
-//Enable GObject Bindings
-HB_HAVE_GOBJECT:BOOL=OFF
-
-//Enable Graphite2 complementary shaper
-HB_HAVE_GRAPHITE2:BOOL=OFF
-
-//Enable icu unicode functions
-HB_HAVE_ICU:BOOL=OFF
-
-//Enable building introspection (.gir/.typelib) files
-HB_HAVE_INTROSPECTION:BOOL=OFF
-
 //Path to a library.
 JACK_LIB:FILEPATH=/usr/lib/libjack.so
+
+//Build the unit tests when BUILD_TESTING is enabled.
+JSON_BuildTests:BOOL=OFF
+
+//Enable CI build targets.
+JSON_CI:BOOL=OFF
+
+//Enable diagnostic positions.
+JSON_Diagnostic_Positions:BOOL=OFF
+
+//Use extended diagnostic messages.
+JSON_Diagnostics:BOOL=OFF
+
+//Disable default integer enum serialization.
+JSON_DisableEnumSerialization:BOOL=OFF
+
+//Place user-defined string literals in the global namespace.
+JSON_GlobalUDLs:BOOL=ON
+
+//Enable implicit conversions.
+JSON_ImplicitConversions:BOOL=ON
+
+//Install CMake targets during install step.
+JSON_Install:BOOL=OFF
+
+//Enable legacy discarded value comparison.
+JSON_LegacyDiscardedValueComparison:BOOL=OFF
+
+//Use non-amalgamated version of the library.
+JSON_MultipleHeaders:BOOL=ON
+
+//Include as system headers (skip for clang-tidy).
+JSON_SystemInclude:BOOL=OFF
 
 //Extra compile options of LibUSB
 LibUSB_COMPILE_OPTIONS:STRING=
@@ -460,8 +413,8 @@ LibUSB_LINK_FLAGS:STRING=
 //Extra link libraries of LibUSB
 LibUSB_LINK_LIBRARIES:STRING=
 
-//Path to a library.
-MATH_LIBRARY:FILEPATH=/usr/lib/libm.so
+//Build C++ modules support
+NLOHMANN_JSON_BUILD_MODULES:BOOL=OFF
 
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
@@ -511,35 +464,146 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
-//Build examples
-PLUTOSVG_BUILD_EXAMPLES:BOOL=OFF
-
-//Enable Freetype integration
-PLUTOSVG_ENABLE_FREETYPE:BOOL=ON
-
-//Build examples
-PLUTOVG_BUILD_EXAMPLES:BOOL=OFF
+//Path to a library.
+PLUTOVG_MATH_LIBRARY:FILEPATH=/usr/lib/libm.so
 
 //Path to a library.
 PULSE_LIB:FILEPATH=/usr/lib/libpulse.so
 
 //Value Computed by CMake
-SDL3_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL
+SDL3_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/external/SDL
 
 //Value Computed by CMake
 SDL3_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-SDL3_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL
+SDL3_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/external/SDL
 
 //Value Computed by CMake
-SDL3_ttf_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL_ttf
+SDL3_image_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/external/SDL_image
+
+//Value Computed by CMake
+SDL3_image_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+SDL3_image_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/external/SDL_image
+
+//Value Computed by CMake
+SDL3_ttf_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/external/SDL_ttf
 
 //Value Computed by CMake
 SDL3_ttf_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-SDL3_ttf_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL_ttf
+SDL3_ttf_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/external/SDL_ttf
+
+//Support loading AVIF images
+SDLIMAGE_AVIF:BOOL=ON
+
+//Add AVIF save support
+SDLIMAGE_AVIF_SAVE:BOOL=ON
+
+//Dynamically load AVIF support (requires shared libavif)
+SDLIMAGE_AVIF_SHARED:BOOL=ON
+
+//Use stb_image for loading JPEG and PNG files
+SDLIMAGE_BACKEND_STB:BOOL=ON
+
+//Support loading BMP images
+SDLIMAGE_BMP:BOOL=ON
+
+//Add BMP save support
+SDLIMAGE_BMP_SAVE:BOOL=ON
+
+//Load dependencies dynamically
+SDLIMAGE_DEPS_SHARED:BOOL=ON
+
+//Support loading GIF images
+SDLIMAGE_GIF:BOOL=ON
+
+//Add GIF save support
+SDLIMAGE_GIF_SAVE:BOOL=ON
+
+//Enable SDL3_image install target
+SDLIMAGE_INSTALL:BOOL=OFF
+
+//Support loading JPEG images
+SDLIMAGE_JPG:BOOL=ON
+
+//Add JPEG save support
+SDLIMAGE_JPG_SAVE:BOOL=ON
+
+//Support loading JXL images
+SDLIMAGE_JXL:BOOL=OFF
+
+//Support loading LBM images
+SDLIMAGE_LBM:BOOL=ON
+
+//Support loading PCX images
+SDLIMAGE_PCX:BOOL=ON
+
+//Support loading PNG images
+SDLIMAGE_PNG:BOOL=ON
+
+//Add PNG save support
+SDLIMAGE_PNG_SAVE:BOOL=ON
+
+//Support loading PNM images
+SDLIMAGE_PNM:BOOL=ON
+
+//Support loading QOI images
+SDLIMAGE_QOI:BOOL=ON
+
+//Build the SDL3_image sample program(s)
+SDLIMAGE_SAMPLES:BOOL=OFF
+
+//Fail when a dependency could not be found
+SDLIMAGE_STRICT:BOOL=OFF
+
+//Support loading SVG images
+SDLIMAGE_SVG:BOOL=ON
+
+//Build unit tests?
+SDLIMAGE_TESTS:BOOL=OFF
+
+//Install unit tests?
+SDLIMAGE_TESTS_INSTALL:BOOL=OFF
+
+//Support loading TGA images
+SDLIMAGE_TGA:BOOL=ON
+
+//Add TGA save support
+SDLIMAGE_TGA_SAVE:BOOL=ON
+
+//Support loading TIFF images
+SDLIMAGE_TIF:BOOL=ON
+
+//Dynamically load TIFF support (requires shared libtiff)
+SDLIMAGE_TIF_SHARED:BOOL=ON
+
+//Use vendored third-party libraries
+SDLIMAGE_VENDORED:BOOL=OFF
+
+//Support loading WEBP images
+SDLIMAGE_WEBP:BOOL=ON
+
+//Add WEBP save support
+SDLIMAGE_WEBP_SAVE:BOOL=ON
+
+//Dynamically load WEBP support (requires shared libwebp)
+SDLIMAGE_WEBP_SHARED:BOOL=ON
+
+//Treat warnings as errors
+SDLIMAGE_WERROR:BOOL=OFF
+
+//Support loading XCF images
+SDLIMAGE_XCF:BOOL=ON
+
+//Support loading XPM images
+SDLIMAGE_XPM:BOOL=ON
+
+//Support loading XV images
+SDLIMAGE_XV:BOOL=ON
 
 //Use harfbuzz to improve text shaping
 SDLTTF_HARFBUZZ:BOOL=ON
@@ -555,6 +619,9 @@ SDLTTF_SAMPLES:BOOL=OFF
 
 //Fail when a dependency could not be found
 SDLTTF_STRICT:BOOL=OFF
+
+//Use vendored third-party libraries
+SDLTTF_VENDORED:BOOL=OFF
 
 //Treat warnings as errors
 SDLTTF_WERROR:BOOL=OFF
@@ -770,9 +837,6 @@ SDL_RENDER:BOOL=ON
 //Enable the SDL_GPU render driver
 SDL_RENDER_GPU:BOOL=ON
 
-//Enable the Metal render driver
-SDL_RENDER_METAL:BOOL=ON
-
 //Enable the Vulkan render driver
 SDL_RENDER_VULKAN:BOOL=ON
 
@@ -890,11 +954,23 @@ SDL_X11_XSYNC:BOOL=ON
 //Enable XTest support
 SDL_X11_XTEST:BOOL=ON
 
-//harfbuzz install option
-SKIP_INSTALL_LIBRARIES:BOOL=ON
-
 //Path to a library.
 SNDIO_LIB:FILEPATH=/usr/lib/libsndio.so
+
+//The directory containing a CMake configuration file for TIFF.
+TIFF_DIR:PATH=TIFF_DIR-NOTFOUND
+
+//Path to a file.
+TIFF_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+TIFF_LIBRARY_DEBUG:FILEPATH=TIFF_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+TIFF_LIBRARY_RELEASE:FILEPATH=/usr/lib/libtiff.so
+
+//The directory containing a CMake configuration file for Tiff.
+Tiff_DIR:PATH=Tiff_DIR-NOTFOUND
 
 //Path to a library.
 UDEV_LIB:FILEPATH=/usr/lib/libudev.so
@@ -1355,26 +1431,35 @@ XSS_LIB:FILEPATH=/usr/lib/libXss.so
 //Path to a library.
 XTST_LIB:FILEPATH=/usr/lib/libXtst.so
 
-//Value Computed by CMake
-freetype_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL_ttf/external/freetype-build
+//Extra compile flags of harfbuzz
+harfbuzz_COMPILE_OPTIONS:STRING=-pthread
+
+//Path to a file.
+harfbuzz_INCLUDE_PATH:PATH=/usr/include/harfbuzz
+
+//Path to a library.
+harfbuzz_LIBRARY:FILEPATH=/usr/lib/libharfbuzz.so
+
+//Extra link directories of harfbuzz
+harfbuzz_LINK_DIRECTORIES:PATH=/usr/lib
+
+//Extra link libraries of harfbuzz
+harfbuzz_LINK_LIBRARIES:STRING=
+
+//Extra link flags of harfbuzz
+harfbuzz_LINK_OPTIONS:STRING=
+
+//The directory containing a CMake configuration file for libavif.
+libavif_DIR:PATH=/usr/lib/cmake/libavif
 
 //Value Computed by CMake
-freetype_IS_TOP_LEVEL:STATIC=OFF
-
-//Dependencies for the target
-freetype_LIB_DEPENDS:STATIC=general;HarfBuzz::HarfBuzz;
+nlohmann_json_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/external/nlohmann_json
 
 //Value Computed by CMake
-freetype_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL_ttf/external/freetype
+nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-harfbuzz_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL_ttf/external/harfbuzz-build
-
-//Value Computed by CMake
-harfbuzz_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-harfbuzz_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL_ttf/external/harfbuzz
+nlohmann_json_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/external/nlohmann_json
 
 //Path to a library.
 pkgcfg_lib_DBUS_dbus-1:FILEPATH=/usr/lib/libdbus-1.so
@@ -1396,6 +1481,9 @@ pkgcfg_lib_LIBURING_uring-ffi:FILEPATH=/usr/lib/liburing-ffi.so
 
 //Path to a library.
 pkgcfg_lib_PC_GBM_gbm:FILEPATH=/usr/lib/libgbm.so
+
+//Path to a library.
+pkgcfg_lib_PC_HARFBUZZ_harfbuzz:FILEPATH=/usr/lib/libharfbuzz.so
 
 //Path to a library.
 pkgcfg_lib_PC_JACK_jack:FILEPATH=/usr/lib/libjack.so
@@ -1445,23 +1533,89 @@ pkgcfg_lib_PC_WAYLAND_xkbcommon:FILEPATH=/usr/lib/libxkbcommon.so
 //Path to a library.
 pkgcfg_lib_PKG_FONTCONFIG_fontconfig:FILEPATH=/usr/lib/libfontconfig.so
 
-//Value Computed by CMake
-plutosvg_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL_ttf/external/plutosvg-guild
+//Extra compile flags of plutosvg
+plutosvg_COMPILE_OPTIONS:STRING=
 
-//Value Computed by CMake
-plutosvg_IS_TOP_LEVEL:STATIC=OFF
+//Path to a file.
+plutosvg_INCLUDE_PATH:PATH=plutosvg_INCLUDE_PATH-NOTFOUND
 
-//Value Computed by CMake
-plutosvg_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL_ttf/external/plutosvg
+//Path to a library.
+plutosvg_LIBRARY:FILEPATH=plutosvg_LIBRARY-NOTFOUND
 
-//Value Computed by CMake
-plutovg_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build/vendored/SDL_ttf/external/plutovg-build
+//Extra link flags of plutosvg
+plutosvg_LINK_DIRECTORIES:STRING=
 
-//Value Computed by CMake
-plutovg_IS_TOP_LEVEL:STATIC=OFF
+//Extra link libraries of plutosvg
+plutosvg_LINK_LIBRARIES:STRING=
 
-//Value Computed by CMake
-plutovg_SOURCE_DIR:STATIC=/home/brasi/projects/xencoder/vendored/SDL_ttf/external/plutovg
+//Extra link flags of plutosvg
+plutosvg_LINK_OPTIONS:STRING=
+
+//Extra compile flags of plutovg
+plutovg_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+plutovg_INCLUDE_PATH:PATH=plutovg_INCLUDE_PATH-NOTFOUND
+
+//Path to a library.
+plutovg_LIBRARY:FILEPATH=plutovg_LIBRARY-NOTFOUND
+
+//Extra link flags of plutovg
+plutovg_LINK_DIRECTORIES:STRING=
+
+//Extra link libraries of plutovg
+plutovg_LINK_LIBRARIES:STRING=
+
+//Extra link flags of plutovg
+plutovg_LINK_OPTIONS:STRING=
+
+//Extra compile options of webp
+webp_COMPILE_OPTIONS:STRING=
+
+//The directory containing a CMake configuration file for webp.
+webp_DIR:PATH=webp_DIR-NOTFOUND
+
+//Path to a file.
+webp_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a library.
+webp_LIBRARY:FILEPATH=/usr/lib/libwebp.so
+
+//Extra link flags of webp
+webp_LINK_FLAGS:STRING=
+
+//Extra link libraries of webp
+webp_LINK_LIBRARIES:STRING=
+
+//Extra compile options of webpdemux
+webpdemux_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+webpdemux_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a library.
+webpdemux_LIBRARY:FILEPATH=/usr/lib/libwebpdemux.so
+
+//Extra link flags of webpdemux
+webpdemux_LINK_FLAGS:STRING=
+
+//Extra link libraries of webpdemux
+webpdemux_LINK_LIBRARIES:STRING=
+
+//Extra compile options of webpmux
+webpmux_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+webpmux_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a library.
+webpmux_LIBRARY:FILEPATH=/usr/lib/libwebpmux.so
+
+//Extra link flags of webpmux
+webpmux_LINK_FLAGS:STRING=
+
+//Extra link libraries of webpmux
+webpmux_LINK_LIBRARIES:STRING=
 
 //Value Computed by CMake
 xencoder_BINARY_DIR:STATIC=/home/brasi/projects/xencoder/build
@@ -1565,8 +1719,6 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_CONNECT:INTERNAL=1
 //Have function gethostbyname
 CMAKE_HAVE_GETHOSTBYNAME:INTERNAL=1
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Have function remove
 CMAKE_HAVE_REMOVE:INTERNAL=1
 //Have function shmat
@@ -1629,7 +1781,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1682,8 +1834,6 @@ COMPILER_SUPPORTS_AVX:INTERNAL=1
 COMPILER_SUPPORTS_AVX2:INTERNAL=1
 //Test COMPILER_SUPPORTS_AVX512F
 COMPILER_SUPPORTS_AVX512F:INTERNAL=1
-//Test COMPILER_SUPPORTS_CXX11
-COMPILER_SUPPORTS_CXX11:INTERNAL=1
 //Test COMPILER_SUPPORTS_ELFNOTES
 COMPILER_SUPPORTS_ELFNOTES:INTERNAL=1
 //Test COMPILER_SUPPORTS_FDIAGNOSTICS_COLOR_ALWAYS
@@ -1702,20 +1852,6 @@ COMPILER_SUPPORTS_SSE3:INTERNAL=1
 COMPILER_SUPPORTS_SSE4_1:INTERNAL=1
 //Test COMPILER_SUPPORTS_SSE4_2
 COMPILER_SUPPORTS_SSE4_2:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_RPM
-CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TBZ2
-CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TGZ
-CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TXZ
-CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TZ
-CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_ZIP
-CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
-//Test CXX_SUPPORTS_FLAG_BSYMB_FUNCS
-CXX_SUPPORTS_FLAG_BSYMB_FUNCS:INTERNAL=1
 DBUS_CFLAGS:INTERNAL=-I/usr/include/dbus-1.0;-I/usr/lib/dbus-1.0/include;-I/usr/include
 DBUS_CFLAGS_I:INTERNAL=
 DBUS_CFLAGS_OTHER:INTERNAL=
@@ -1753,18 +1889,22 @@ DBUS_dbus-1_PREFIX:INTERNAL=
 DBUS_dbus-1_VERSION:INTERNAL=
 //Details about finding ALSA
 FIND_PACKAGE_MESSAGE_DETAILS_ALSA:INTERNAL=[/usr/lib/libasound.so][/usr/include][v1.2.14()]
+//Details about finding Freetype
+FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[/usr/lib/libfreetype.so][/usr/include/freetype2][v2.13.3(2.8.0)]
 //Details about finding LibUSB
 FIND_PACKAGE_MESSAGE_DETAILS_LibUSB:INTERNAL=[/usr/lib/libusb-1.0.so][/usr/include/libusb-1.0][v1.0.29()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][ ][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.5.1()]
-//Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.13][found components: Interpreter ][v3.13.7()]
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding TIFF
+FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[/usr/lib/libtiff.so][/usr/include][ ][v4.7.0()]
 //Details about finding X11
 FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/include][/usr/lib/libX11.so][ ][v()]
+//Details about finding harfbuzz
+FIND_PACKAGE_MESSAGE_DETAILS_harfbuzz:INTERNAL=[/usr/lib/libharfbuzz.so][/usr/include/harfbuzz][v11.4.4(2.3.1)]
+//Details about finding webp
+FIND_PACKAGE_MESSAGE_DETAILS_webp:INTERNAL=[/usr/lib/libwebp.so][/usr/include][/usr/lib/libwebpdemux.so][/usr/include][/usr/lib/libwebpmux.so][/usr/include][v()]
 //Have library c
 FOUND_CLOCK_GETTIME_LIBC:INTERNAL=1
 //ADVANCED property for variable: FREETYPE_INCLUDE_DIR_freetype2
@@ -1783,8 +1923,6 @@ Fontconfig_LIBRARY-ADVANCED:INTERNAL=1
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include alloca.h
 HAVE_ALLOCA_H:INTERNAL=1
-//Have function atexit
-HAVE_ATEXIT:INTERNAL=1
 //Test HAVE_CLANG_COMMENT_BLOCK_COMMANDS
 HAVE_CLANG_COMMENT_BLOCK_COMMANDS:INTERNAL=
 //Have symbol dlopen
@@ -1793,8 +1931,6 @@ HAVE_DLOPEN_IN_LIBC:INTERNAL=1
 HAVE_ELF_AUX_INFO:INTERNAL=
 //Test HAVE_ENABLE_NEW_DTAGS
 HAVE_ENABLE_NEW_DTAGS:INTERNAL=1
-//Have include fcntl.h
-HAVE_FCNTL_H:INTERNAL=1
 //Have symbol fdatasync
 HAVE_FDATASYNC:INTERNAL=1
 //Test HAVE_GCC_COMMENT_BLOCK_COMMANDS
@@ -1833,8 +1969,6 @@ HAVE_INOTIFY_INIT:INTERNAL=1
 HAVE_INOTIFY_INIT1:INTERNAL=1
 //Test HAVE_INPUT_KD
 HAVE_INPUT_KD:INTERNAL=1
-//Have function isatty
-HAVE_ISATTY:INTERNAL=1
 //Have library m
 HAVE_LIBM:INTERNAL=1
 //Have include libudev.h
@@ -1849,10 +1983,6 @@ HAVE_LINUX_VIDEODEV2_H:INTERNAL=1
 HAVE_LOCALTIME_R:INTERNAL=1
 //Have symbol memfd_create
 HAVE_MEMFD_CREATE:INTERNAL=1
-//Have function mmap
-HAVE_MMAP:INTERNAL=1
-//Have function mprotect
-HAVE_MPROTECT:INTERNAL=1
 //Have symbol nanosleep
 HAVE_NANOSLEEP:INTERNAL=1
 //Have symbol nl_langinfo
@@ -1901,8 +2031,6 @@ HAVE_SHMAT_IN_LIBC:INTERNAL=1
 HAVE_SIGACTION:INTERNAL=1
 //Have symbol sigtimedwait
 HAVE_SIGTIMEDWAIT:INTERNAL=1
-//Have include stdbool.h
-HAVE_STDBOOL_H:INTERNAL=1
 //Test HAVE_ST_MTIM
 HAVE_ST_MTIM:INTERNAL=1
 //Have symbol sysconf
@@ -1911,10 +2039,6 @@ HAVE_SYSCONF:INTERNAL=1
 HAVE_SYSCTLBYNAME:INTERNAL=
 //Have include sys/inotify.h
 HAVE_SYS_INOTIFY_H:INTERNAL=1
-//Have include sys/mman.h
-HAVE_SYS_MMAN_H:INTERNAL=1
-//Have include unistd.h
-HAVE_UNISTD_H:INTERNAL=1
 //Test HAVE_WL_NO_UNDEFINED
 HAVE_WL_NO_UNDEFINED:INTERNAL=1
 //Test HAVE_XFIXES_H
@@ -2253,6 +2377,7 @@ LIBURING_liburing-ffi_VERSION:INTERNAL=
 LINKER_SUPPORTS_VERSION_SCRIPT:INTERNAL=1
 //Test LINKER_SUPPORTS_WL_NO_UNDEFINED
 LINKER_SUPPORTS_WL_NO_UNDEFINED:INTERNAL=1
+NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLES2_INCLUDE_DIR
@@ -2314,6 +2439,41 @@ PC_GBM_gbm_INCLUDEDIR:INTERNAL=
 PC_GBM_gbm_LIBDIR:INTERNAL=
 PC_GBM_gbm_PREFIX:INTERNAL=
 PC_GBM_gbm_VERSION:INTERNAL=
+PC_HARFBUZZ_CFLAGS:INTERNAL=-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/glib-2.0/include;-I/usr/include/sysprof-6;-pthread
+PC_HARFBUZZ_CFLAGS_I:INTERNAL=
+PC_HARFBUZZ_CFLAGS_OTHER:INTERNAL=-pthread
+PC_HARFBUZZ_FOUND:INTERNAL=1
+PC_HARFBUZZ_INCLUDEDIR:INTERNAL=/usr/include
+PC_HARFBUZZ_INCLUDE_DIRS:INTERNAL=/usr/include/harfbuzz;/usr/include/freetype2;/usr/include;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/sysprof-6
+PC_HARFBUZZ_LDFLAGS:INTERNAL=-L/usr/lib;-lharfbuzz
+PC_HARFBUZZ_LDFLAGS_OTHER:INTERNAL=
+PC_HARFBUZZ_LIBDIR:INTERNAL=/usr/lib
+PC_HARFBUZZ_LIBRARIES:INTERNAL=harfbuzz
+PC_HARFBUZZ_LIBRARY_DIRS:INTERNAL=/usr/lib
+PC_HARFBUZZ_LIBS:INTERNAL=
+PC_HARFBUZZ_LIBS_L:INTERNAL=
+PC_HARFBUZZ_LIBS_OTHER:INTERNAL=
+PC_HARFBUZZ_LIBS_PATHS:INTERNAL=
+PC_HARFBUZZ_MODULE_NAME:INTERNAL=harfbuzz
+PC_HARFBUZZ_PREFIX:INTERNAL=/usr
+PC_HARFBUZZ_STATIC_CFLAGS:INTERNAL=-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/glib-2.0/include;-I/usr/include/sysprof-6;-pthread
+PC_HARFBUZZ_STATIC_CFLAGS_I:INTERNAL=
+PC_HARFBUZZ_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+PC_HARFBUZZ_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/harfbuzz;/usr/include/freetype2;/usr/include;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/sysprof-6
+PC_HARFBUZZ_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lharfbuzz;-pthread;-lm;-lfreetype;-lbz2;-lpng16;-lm;-lm;-lz;-lbrotlidec;-lbrotlicommon;-lglib-2.0;-lm;-lsysprof-capture-4;-Wl,-z,nodelete;-pthread;-lpcre2-8;-lgraphite2
+PC_HARFBUZZ_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-z,nodelete;-pthread
+PC_HARFBUZZ_STATIC_LIBDIR:INTERNAL=
+PC_HARFBUZZ_STATIC_LIBRARIES:INTERNAL=harfbuzz;m;freetype;bz2;png16;m;m;z;brotlidec;brotlicommon;glib-2.0;m;sysprof-capture-4;pcre2-8;graphite2
+PC_HARFBUZZ_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib
+PC_HARFBUZZ_STATIC_LIBS:INTERNAL=
+PC_HARFBUZZ_STATIC_LIBS_L:INTERNAL=
+PC_HARFBUZZ_STATIC_LIBS_OTHER:INTERNAL=
+PC_HARFBUZZ_STATIC_LIBS_PATHS:INTERNAL=
+PC_HARFBUZZ_VERSION:INTERNAL=11.4.4
+PC_HARFBUZZ_harfbuzz_INCLUDEDIR:INTERNAL=
+PC_HARFBUZZ_harfbuzz_LIBDIR:INTERNAL=
+PC_HARFBUZZ_harfbuzz_PREFIX:INTERNAL=
+PC_HARFBUZZ_harfbuzz_VERSION:INTERNAL=
 PC_JACK_CFLAGS:INTERNAL=-I/usr/include;-D_REENTRANT
 PC_JACK_CFLAGS_I:INTERNAL=
 PC_JACK_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
@@ -2532,6 +2692,56 @@ PC_PIPEWIRE_libpipewire-0.3_INCLUDEDIR:INTERNAL=
 PC_PIPEWIRE_libpipewire-0.3_LIBDIR:INTERNAL=
 PC_PIPEWIRE_libpipewire-0.3_PREFIX:INTERNAL=
 PC_PIPEWIRE_libpipewire-0.3_VERSION:INTERNAL=
+PC_PLUTOSG_CFLAGS:INTERNAL=
+PC_PLUTOSG_CFLAGS_I:INTERNAL=
+PC_PLUTOSG_CFLAGS_OTHER:INTERNAL=
+PC_PLUTOSG_FOUND:INTERNAL=
+PC_PLUTOSG_INCLUDEDIR:INTERNAL=
+PC_PLUTOSG_LIBDIR:INTERNAL=
+PC_PLUTOSG_LIBS:INTERNAL=
+PC_PLUTOSG_LIBS_L:INTERNAL=
+PC_PLUTOSG_LIBS_OTHER:INTERNAL=
+PC_PLUTOSG_LIBS_PATHS:INTERNAL=
+PC_PLUTOSG_MODULE_NAME:INTERNAL=
+PC_PLUTOSG_PREFIX:INTERNAL=
+PC_PLUTOSG_STATIC_CFLAGS:INTERNAL=
+PC_PLUTOSG_STATIC_CFLAGS_I:INTERNAL=
+PC_PLUTOSG_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_PLUTOSG_STATIC_LIBDIR:INTERNAL=
+PC_PLUTOSG_STATIC_LIBS:INTERNAL=
+PC_PLUTOSG_STATIC_LIBS_L:INTERNAL=
+PC_PLUTOSG_STATIC_LIBS_OTHER:INTERNAL=
+PC_PLUTOSG_STATIC_LIBS_PATHS:INTERNAL=
+PC_PLUTOSG_VERSION:INTERNAL=
+PC_PLUTOSG_plutovg_INCLUDEDIR:INTERNAL=
+PC_PLUTOSG_plutovg_LIBDIR:INTERNAL=
+PC_PLUTOSG_plutovg_PREFIX:INTERNAL=
+PC_PLUTOSG_plutovg_VERSION:INTERNAL=
+PC_PLUTOSVG_CFLAGS:INTERNAL=
+PC_PLUTOSVG_CFLAGS_I:INTERNAL=
+PC_PLUTOSVG_CFLAGS_OTHER:INTERNAL=
+PC_PLUTOSVG_FOUND:INTERNAL=
+PC_PLUTOSVG_INCLUDEDIR:INTERNAL=
+PC_PLUTOSVG_LIBDIR:INTERNAL=
+PC_PLUTOSVG_LIBS:INTERNAL=
+PC_PLUTOSVG_LIBS_L:INTERNAL=
+PC_PLUTOSVG_LIBS_OTHER:INTERNAL=
+PC_PLUTOSVG_LIBS_PATHS:INTERNAL=
+PC_PLUTOSVG_MODULE_NAME:INTERNAL=
+PC_PLUTOSVG_PREFIX:INTERNAL=
+PC_PLUTOSVG_STATIC_CFLAGS:INTERNAL=
+PC_PLUTOSVG_STATIC_CFLAGS_I:INTERNAL=
+PC_PLUTOSVG_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_PLUTOSVG_STATIC_LIBDIR:INTERNAL=
+PC_PLUTOSVG_STATIC_LIBS:INTERNAL=
+PC_PLUTOSVG_STATIC_LIBS_L:INTERNAL=
+PC_PLUTOSVG_STATIC_LIBS_OTHER:INTERNAL=
+PC_PLUTOSVG_STATIC_LIBS_PATHS:INTERNAL=
+PC_PLUTOSVG_VERSION:INTERNAL=
+PC_PLUTOSVG_plutosvg_INCLUDEDIR:INTERNAL=
+PC_PLUTOSVG_plutosvg_LIBDIR:INTERNAL=
+PC_PLUTOSVG_plutosvg_PREFIX:INTERNAL=
+PC_PLUTOSVG_plutosvg_VERSION:INTERNAL=
 PC_PULSEAUDIO_CFLAGS:INTERNAL=-I/usr/include;-D_REENTRANT
 PC_PULSEAUDIO_CFLAGS_I:INTERNAL=
 PC_PULSEAUDIO_CFLAGS_OTHER:INTERNAL=-D_REENTRANT
@@ -2705,6 +2915,12 @@ SDL_CHECK_REQUIRED_LINK_OPTIONS-ADVANCED:INTERNAL=1
 SDL_CPU_CHECK_ALL:INTERNAL=TRUE
 //Have include X11/XKBlib.h
 SDL_VIDEO_DRIVER_X11_HAS_XKBLIB:INTERNAL=1
+//ADVANCED property for variable: TIFF_INCLUDE_DIR
+TIFF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TIFF_LIBRARY_DEBUG
+TIFF_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TIFF_LIBRARY_RELEASE
+TIFF_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
 X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_LIB
@@ -2981,18 +3197,8 @@ X11_xkbfile_INCLUDE_PATH-ADVANCED:INTERNAL=1
 X11_xkbfile_LIB-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-//Compiler reason failure
-_Python3_Compiler_REASON_FAILURE:INTERNAL=
-//Development reason failure
-_Python3_Development_REASON_FAILURE:INTERNAL=
-//Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.13
-//Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;7;64;32;<none>;cpython-313-x86_64-linux-gnu;abi3;/usr/lib/python3.13;/usr/lib/python3.13;/usr/lib/python3.13/site-packages;/usr/lib/python3.13/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=3cf1743d9aa7acccc2d2c98aa826f506
-//NumPy reason failure
-_Python3_NumPy_REASON_FAILURE:INTERNAL=
 __pkg_config_arguments_PC_GBM:INTERNAL=IMPORTED_TARGET;gbm
+__pkg_config_arguments_PC_HARFBUZZ:INTERNAL=QUIET;harfbuzz
 __pkg_config_arguments_PC_JACK:INTERNAL=IMPORTED_TARGET;jack
 __pkg_config_arguments_PC_LIBDECOR:INTERNAL=IMPORTED_TARGET;libdecor-0
 __pkg_config_arguments_PC_LIBDRM:INTERNAL=IMPORTED_TARGET;libdrm
@@ -3007,12 +3213,15 @@ __pkg_config_checked_DBUS:INTERNAL=1
 __pkg_config_checked_IBUS:INTERNAL=1
 __pkg_config_checked_LIBURING:INTERNAL=1
 __pkg_config_checked_PC_GBM:INTERNAL=1
+__pkg_config_checked_PC_HARFBUZZ:INTERNAL=1
 __pkg_config_checked_PC_JACK:INTERNAL=1
 __pkg_config_checked_PC_LIBDECOR:INTERNAL=1
 __pkg_config_checked_PC_LIBDRM:INTERNAL=1
 __pkg_config_checked_PC_LIBUNWIND:INTERNAL=1
 __pkg_config_checked_PC_LibUSB:INTERNAL=1
 __pkg_config_checked_PC_PIPEWIRE:INTERNAL=1
+__pkg_config_checked_PC_PLUTOSG:INTERNAL=1
+__pkg_config_checked_PC_PLUTOSVG:INTERNAL=1
 __pkg_config_checked_PC_PULSEAUDIO:INTERNAL=1
 __pkg_config_checked_PC_SNDIO:INTERNAL=1
 __pkg_config_checked_PC_WAYLAND:INTERNAL=1
@@ -3031,6 +3240,8 @@ pkgcfg_lib_IBUS_ibus-1.0-ADVANCED:INTERNAL=1
 pkgcfg_lib_LIBURING_uring-ffi-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_GBM_gbm
 pkgcfg_lib_PC_GBM_gbm-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_HARFBUZZ_harfbuzz
+pkgcfg_lib_PC_HARFBUZZ_harfbuzz-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_JACK_jack
 pkgcfg_lib_PC_JACK_jack-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_LIBDECOR_decor-0

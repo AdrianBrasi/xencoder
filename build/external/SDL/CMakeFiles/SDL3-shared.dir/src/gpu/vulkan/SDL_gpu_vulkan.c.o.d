@@ -1,0 +1,33 @@
+external/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/vulkan/SDL_gpu_vulkan.c.o: \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/SDL_gpu_vulkan.c \
+ /usr/include/stdc-predef.h \
+ /home/brasi/projects/xencoder/external/SDL/src/SDL_internal.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/vulkan.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/vk_platform.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/vulkan_core.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codecs_common.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h264std_encode.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h265std_encode.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h264std_decode.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_h265std_decode.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_av1std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_av1std_decode.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/../vk_video/vulkan_video_codec_av1std.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/khronos/vulkan/vulkan_beta.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_vulkan.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_stdinc.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_error.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_video.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_begin_code.h \
+ /home/brasi/projects/xencoder/external/SDL/include/SDL3/SDL_close_code.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../SDL_sysgpu.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/SDL_sysvideo.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/SDL_surface_c.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/../../video/SDL_blit.h \
+ /home/brasi/projects/xencoder/external/SDL/src/gpu/vulkan/SDL_gpu_vulkan_vkfuncs.h

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/brasi/projects/xencoder/vendored/SDL_ttf/include -I/home/brasi/projects/xencoder/build/vendored/SDL/include-revision -I/home/brasi/projects/xencoder/vendored/SDL/include
+CXX_INCLUDES = -I/home/brasi/projects/xencoder/build/external/SDL/include-revision -I/home/brasi/projects/xencoder/external/SDL/include -I/home/brasi/projects/xencoder/external/SDL_image/include -I/home/brasi/projects/xencoder/external/SDL_ttf/include -I/home/brasi/projects/xencoder/external/nlohmann_json/include -I/home/brasi/projects/xencoder/external/imgui -I/home/brasi/projects/xencoder/external/imgui/backends
 
 CXX_FLAGS = -std=gnu++20 -fPIE
 

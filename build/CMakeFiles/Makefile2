@@ -63,153 +63,161 @@ CMAKE_BINARY_DIR = /home/brasi/projects/xencoder/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/imgui.dir/all
 all: CMakeFiles/xencoder.dir/all
+all: external/SDL/all
+all: external/SDL_image/all
+all: external/SDL_ttf/all
+all: external/nlohmann_json/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/imgui.dir/codegen
 codegen: CMakeFiles/xencoder.dir/codegen
+codegen: external/SDL/codegen
+codegen: external/SDL_image/codegen
+codegen: external/SDL_ttf/codegen
+codegen: external/nlohmann_json/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: external/SDL/preinstall
+preinstall: external/SDL_image/preinstall
+preinstall: external/SDL_ttf/preinstall
+preinstall: external/nlohmann_json/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/imgui.dir/clean
 clean: CMakeFiles/xencoder.dir/clean
-clean: vendored/SDL/clean
-clean: vendored/SDL_ttf/clean
+clean: external/SDL/clean
+clean: external/SDL_image/clean
+clean: external/SDL_ttf/clean
+clean: external/nlohmann_json/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory vendored/SDL
+# Directory level rules for directory external/SDL
 
 # Recursive "all" directory target.
-vendored/SDL/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
-vendored/SDL/all: vendored/SDL/CMakeFiles/SDL3_test.dir/all
-vendored/SDL/all: vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
-.PHONY : vendored/SDL/all
+external/SDL/all: external/SDL/CMakeFiles/SDL3-shared.dir/all
+external/SDL/all: external/SDL/CMakeFiles/SDL3_test.dir/all
+external/SDL/all: external/SDL/CMakeFiles/SDL_uclibc.dir/all
+.PHONY : external/SDL/all
 
 # Recursive "codegen" directory target.
-vendored/SDL/codegen: vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen
-vendored/SDL/codegen: vendored/SDL/CMakeFiles/SDL3_test.dir/codegen
-vendored/SDL/codegen: vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen
-.PHONY : vendored/SDL/codegen
+external/SDL/codegen: external/SDL/CMakeFiles/SDL3-shared.dir/codegen
+external/SDL/codegen: external/SDL/CMakeFiles/SDL3_test.dir/codegen
+external/SDL/codegen: external/SDL/CMakeFiles/SDL_uclibc.dir/codegen
+.PHONY : external/SDL/codegen
 
 # Recursive "preinstall" directory target.
-vendored/SDL/preinstall:
-.PHONY : vendored/SDL/preinstall
+external/SDL/preinstall:
+.PHONY : external/SDL/preinstall
 
 # Recursive "clean" directory target.
-vendored/SDL/clean: vendored/SDL/CMakeFiles/SDL3-shared.dir/clean
-vendored/SDL/clean: vendored/SDL/CMakeFiles/SDL3_test.dir/clean
-vendored/SDL/clean: vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean
-.PHONY : vendored/SDL/clean
+external/SDL/clean: external/SDL/CMakeFiles/SDL3-shared.dir/clean
+external/SDL/clean: external/SDL/CMakeFiles/SDL3_test.dir/clean
+external/SDL/clean: external/SDL/CMakeFiles/SDL_uclibc.dir/clean
+.PHONY : external/SDL/clean
 
 #=============================================================================
-# Directory level rules for directory vendored/SDL_ttf
+# Directory level rules for directory external/SDL_image
 
 # Recursive "all" directory target.
-vendored/SDL_ttf/all: vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
-.PHONY : vendored/SDL_ttf/all
+external/SDL_image/all: external/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
+.PHONY : external/SDL_image/all
 
 # Recursive "codegen" directory target.
-vendored/SDL_ttf/codegen: vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
-.PHONY : vendored/SDL_ttf/codegen
+external/SDL_image/codegen: external/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen
+.PHONY : external/SDL_image/codegen
 
 # Recursive "preinstall" directory target.
-vendored/SDL_ttf/preinstall:
-.PHONY : vendored/SDL_ttf/preinstall
+external/SDL_image/preinstall:
+.PHONY : external/SDL_image/preinstall
 
 # Recursive "clean" directory target.
-vendored/SDL_ttf/clean: vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
-vendored/SDL_ttf/clean: vendored/SDL_ttf/external/harfbuzz-build/clean
-vendored/SDL_ttf/clean: vendored/SDL_ttf/external/freetype-build/clean
-vendored/SDL_ttf/clean: vendored/SDL_ttf/external/plutovg-build/clean
-vendored/SDL_ttf/clean: vendored/SDL_ttf/external/plutosvg-guild/clean
-.PHONY : vendored/SDL_ttf/clean
+external/SDL_image/clean: external/SDL_image/CMakeFiles/SDL3_image-shared.dir/clean
+.PHONY : external/SDL_image/clean
 
 #=============================================================================
-# Directory level rules for directory vendored/SDL_ttf/external/freetype-build
+# Directory level rules for directory external/SDL_ttf
 
 # Recursive "all" directory target.
-vendored/SDL_ttf/external/freetype-build/all: vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/all
-.PHONY : vendored/SDL_ttf/external/freetype-build/all
+external/SDL_ttf/all: external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+.PHONY : external/SDL_ttf/all
 
 # Recursive "codegen" directory target.
-vendored/SDL_ttf/external/freetype-build/codegen: vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/codegen
-.PHONY : vendored/SDL_ttf/external/freetype-build/codegen
+external/SDL_ttf/codegen: external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
+.PHONY : external/SDL_ttf/codegen
 
 # Recursive "preinstall" directory target.
-vendored/SDL_ttf/external/freetype-build/preinstall:
-.PHONY : vendored/SDL_ttf/external/freetype-build/preinstall
+external/SDL_ttf/preinstall:
+.PHONY : external/SDL_ttf/preinstall
 
 # Recursive "clean" directory target.
-vendored/SDL_ttf/external/freetype-build/clean: vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/clean
-.PHONY : vendored/SDL_ttf/external/freetype-build/clean
+external/SDL_ttf/clean: external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
+.PHONY : external/SDL_ttf/clean
 
 #=============================================================================
-# Directory level rules for directory vendored/SDL_ttf/external/harfbuzz-build
+# Directory level rules for directory external/nlohmann_json
 
 # Recursive "all" directory target.
-vendored/SDL_ttf/external/harfbuzz-build/all: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/all
+external/nlohmann_json/all:
+.PHONY : external/nlohmann_json/all
 
 # Recursive "codegen" directory target.
-vendored/SDL_ttf/external/harfbuzz-build/codegen: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/codegen
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/codegen
+external/nlohmann_json/codegen:
+.PHONY : external/nlohmann_json/codegen
 
 # Recursive "preinstall" directory target.
-vendored/SDL_ttf/external/harfbuzz-build/preinstall:
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/preinstall
+external/nlohmann_json/preinstall:
+.PHONY : external/nlohmann_json/preinstall
 
 # Recursive "clean" directory target.
-vendored/SDL_ttf/external/harfbuzz-build/clean: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/clean
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/clean
+external/nlohmann_json/clean:
+.PHONY : external/nlohmann_json/clean
 
 #=============================================================================
-# Directory level rules for directory vendored/SDL_ttf/external/plutosvg-guild
+# Target rules for target CMakeFiles/imgui.dir
 
-# Recursive "all" directory target.
-vendored/SDL_ttf/external/plutosvg-guild/all: vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/all
+# All Build rule for target.
+CMakeFiles/imgui.dir/all: external/SDL/CMakeFiles/SDL3-shared.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=98,99 "Built target imgui"
+.PHONY : CMakeFiles/imgui.dir/all
 
-# Recursive "codegen" directory target.
-vendored/SDL_ttf/external/plutosvg-guild/codegen: vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/codegen
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/codegen
+# Build rule for subdir invocation for target.
+CMakeFiles/imgui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imgui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
+.PHONY : CMakeFiles/imgui.dir/rule
 
-# Recursive "preinstall" directory target.
-vendored/SDL_ttf/external/plutosvg-guild/preinstall:
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/preinstall
+# Convenience name for target.
+imgui: CMakeFiles/imgui.dir/rule
+.PHONY : imgui
 
-# Recursive "clean" directory target.
-vendored/SDL_ttf/external/plutosvg-guild/clean: vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/clean
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/clean
+# codegen rule for target.
+CMakeFiles/imgui.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=98,99 "Finished codegen for target imgui"
+.PHONY : CMakeFiles/imgui.dir/codegen
 
-#=============================================================================
-# Directory level rules for directory vendored/SDL_ttf/external/plutovg-build
-
-# Recursive "all" directory target.
-vendored/SDL_ttf/external/plutovg-build/all: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all
-.PHONY : vendored/SDL_ttf/external/plutovg-build/all
-
-# Recursive "codegen" directory target.
-vendored/SDL_ttf/external/plutovg-build/codegen: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/codegen
-.PHONY : vendored/SDL_ttf/external/plutovg-build/codegen
-
-# Recursive "preinstall" directory target.
-vendored/SDL_ttf/external/plutovg-build/preinstall:
-.PHONY : vendored/SDL_ttf/external/plutovg-build/preinstall
-
-# Recursive "clean" directory target.
-vendored/SDL_ttf/external/plutovg-build/clean: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/clean
-.PHONY : vendored/SDL_ttf/external/plutovg-build/clean
+# clean rule for target.
+CMakeFiles/imgui.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/clean
+.PHONY : CMakeFiles/imgui.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/xencoder.dir
 
 # All Build rule for target.
-CMakeFiles/xencoder.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
-CMakeFiles/xencoder.dir/all: vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+CMakeFiles/xencoder.dir/all: CMakeFiles/imgui.dir/all
+CMakeFiles/xencoder.dir/all: external/SDL/CMakeFiles/SDL3-shared.dir/all
+CMakeFiles/xencoder.dir/all: external/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
+CMakeFiles/xencoder.dir/all: external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xencoder.dir/build.make CMakeFiles/xencoder.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xencoder.dir/build.make CMakeFiles/xencoder.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=100 "Built target xencoder"
@@ -238,264 +246,164 @@ CMakeFiles/xencoder.dir/clean:
 .PHONY : CMakeFiles/xencoder.dir/clean
 
 #=============================================================================
-# Target rules for target vendored/SDL/CMakeFiles/SDL3-shared.dir
+# Target rules for target external/SDL/CMakeFiles/SDL3-shared.dir
 
 # All Build rule for target.
-vendored/SDL/CMakeFiles/SDL3-shared.dir/all: vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target SDL3-shared"
-.PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/all
+external/SDL/CMakeFiles/SDL3-shared.dir/all: external/SDL/CMakeFiles/SDL_uclibc.dir/all
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3-shared.dir/build.make external/SDL/CMakeFiles/SDL3-shared.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3-shared.dir/build.make external/SDL/CMakeFiles/SDL3-shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Built target SDL3-shared"
+.PHONY : external/SDL/CMakeFiles/SDL3-shared.dir/all
 
 # Build rule for subdir invocation for target.
-vendored/SDL/CMakeFiles/SDL3-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 82
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL/CMakeFiles/SDL3-shared.dir/all
+external/SDL/CMakeFiles/SDL3-shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 87
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL/CMakeFiles/SDL3-shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/rule
+.PHONY : external/SDL/CMakeFiles/SDL3-shared.dir/rule
 
 # Convenience name for target.
-SDL3-shared: vendored/SDL/CMakeFiles/SDL3-shared.dir/rule
+SDL3-shared: external/SDL/CMakeFiles/SDL3-shared.dir/rule
 .PHONY : SDL3-shared
 
 # codegen rule for target.
-vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Finished codegen for target SDL3-shared"
-.PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen
+external/SDL/CMakeFiles/SDL3-shared.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3-shared.dir/build.make external/SDL/CMakeFiles/SDL3-shared.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Finished codegen for target SDL3-shared"
+.PHONY : external/SDL/CMakeFiles/SDL3-shared.dir/codegen
 
 # clean rule for target.
-vendored/SDL/CMakeFiles/SDL3-shared.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/clean
-.PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/clean
+external/SDL/CMakeFiles/SDL3-shared.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3-shared.dir/build.make external/SDL/CMakeFiles/SDL3-shared.dir/clean
+.PHONY : external/SDL/CMakeFiles/SDL3-shared.dir/clean
 
 #=============================================================================
-# Target rules for target vendored/SDL/CMakeFiles/SDL3_test.dir
+# Target rules for target external/SDL/CMakeFiles/SDL3_test.dir
 
 # All Build rule for target.
-vendored/SDL/CMakeFiles/SDL3_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=77,78 "Built target SDL3_test"
-.PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/all
+external/SDL/CMakeFiles/SDL3_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3_test.dir/build.make external/SDL/CMakeFiles/SDL3_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3_test.dir/build.make external/SDL/CMakeFiles/SDL3_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=88,89 "Built target SDL3_test"
+.PHONY : external/SDL/CMakeFiles/SDL3_test.dir/all
 
 # Build rule for subdir invocation for target.
-vendored/SDL/CMakeFiles/SDL3_test.dir/rule: cmake_check_build_system
+external/SDL/CMakeFiles/SDL3_test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL/CMakeFiles/SDL3_test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL/CMakeFiles/SDL3_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/rule
+.PHONY : external/SDL/CMakeFiles/SDL3_test.dir/rule
 
 # Convenience name for target.
-SDL3_test: vendored/SDL/CMakeFiles/SDL3_test.dir/rule
+SDL3_test: external/SDL/CMakeFiles/SDL3_test.dir/rule
 .PHONY : SDL3_test
 
 # codegen rule for target.
-vendored/SDL/CMakeFiles/SDL3_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=77,78 "Finished codegen for target SDL3_test"
-.PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/codegen
+external/SDL/CMakeFiles/SDL3_test.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3_test.dir/build.make external/SDL/CMakeFiles/SDL3_test.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=88,89 "Finished codegen for target SDL3_test"
+.PHONY : external/SDL/CMakeFiles/SDL3_test.dir/codegen
 
 # clean rule for target.
-vendored/SDL/CMakeFiles/SDL3_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/clean
-.PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/clean
+external/SDL/CMakeFiles/SDL3_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3_test.dir/build.make external/SDL/CMakeFiles/SDL3_test.dir/clean
+.PHONY : external/SDL/CMakeFiles/SDL3_test.dir/clean
 
 #=============================================================================
-# Target rules for target vendored/SDL/CMakeFiles/SDL_uclibc.dir
+# Target rules for target external/SDL/CMakeFiles/SDL_uclibc.dir
 
 # All Build rule for target.
-vendored/SDL/CMakeFiles/SDL_uclibc.dir/all:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=81,82,83,84,85,86 "Built target SDL_uclibc"
-.PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
+external/SDL/CMakeFiles/SDL_uclibc.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL_uclibc.dir/build.make external/SDL/CMakeFiles/SDL_uclibc.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL_uclibc.dir/build.make external/SDL/CMakeFiles/SDL_uclibc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=92,93,94,95,96,97 "Built target SDL_uclibc"
+.PHONY : external/SDL/CMakeFiles/SDL_uclibc.dir/all
 
 # Build rule for subdir invocation for target.
-vendored/SDL/CMakeFiles/SDL_uclibc.dir/rule: cmake_check_build_system
+external/SDL/CMakeFiles/SDL_uclibc.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL/CMakeFiles/SDL_uclibc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/rule
+.PHONY : external/SDL/CMakeFiles/SDL_uclibc.dir/rule
 
 # Convenience name for target.
-SDL_uclibc: vendored/SDL/CMakeFiles/SDL_uclibc.dir/rule
+SDL_uclibc: external/SDL/CMakeFiles/SDL_uclibc.dir/rule
 .PHONY : SDL_uclibc
 
 # codegen rule for target.
-vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=81,82,83,84,85,86 "Finished codegen for target SDL_uclibc"
-.PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen
+external/SDL/CMakeFiles/SDL_uclibc.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL_uclibc.dir/build.make external/SDL/CMakeFiles/SDL_uclibc.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=92,93,94,95,96,97 "Finished codegen for target SDL_uclibc"
+.PHONY : external/SDL/CMakeFiles/SDL_uclibc.dir/codegen
 
 # clean rule for target.
-vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean
-.PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean
+external/SDL/CMakeFiles/SDL_uclibc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL_uclibc.dir/build.make external/SDL/CMakeFiles/SDL_uclibc.dir/clean
+.PHONY : external/SDL/CMakeFiles/SDL_uclibc.dir/clean
 
 #=============================================================================
-# Target rules for target vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir
+# Target rules for target external/SDL_image/CMakeFiles/SDL3_image-shared.dir
 
 # All Build rule for target.
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all: vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=79,80 "Built target SDL3_ttf-shared"
-.PHONY : vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+external/SDL_image/CMakeFiles/SDL3_image-shared.dir/all: external/SDL/CMakeFiles/SDL3-shared.dir/all
+	$(MAKE) $(MAKESILENT) -f external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make external/SDL_image/CMakeFiles/SDL3_image-shared.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=82,83,84,85,86,87 "Built target SDL3_image-shared"
+.PHONY : external/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
 
 # Build rule for subdir invocation for target.
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 97
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+external/SDL_image/CMakeFiles/SDL3_image-shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 93
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule
+.PHONY : external/SDL_image/CMakeFiles/SDL3_image-shared.dir/rule
 
 # Convenience name for target.
-SDL3_ttf-shared: vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule
+SDL3_image-shared: external/SDL_image/CMakeFiles/SDL3_image-shared.dir/rule
+.PHONY : SDL3_image-shared
+
+# codegen rule for target.
+external/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make external/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=82,83,84,85,86,87 "Finished codegen for target SDL3_image-shared"
+.PHONY : external/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen
+
+# clean rule for target.
+external/SDL_image/CMakeFiles/SDL3_image-shared.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make external/SDL_image/CMakeFiles/SDL3_image-shared.dir/clean
+.PHONY : external/SDL_image/CMakeFiles/SDL3_image-shared.dir/clean
+
+#=============================================================================
+# Target rules for target external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir
+
+# All Build rule for target.
+external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all: external/SDL/CMakeFiles/SDL3-shared.dir/all
+	$(MAKE) $(MAKESILENT) -f external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=90,91 "Built target SDL3_ttf-shared"
+.PHONY : external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+
+# Build rule for subdir invocation for target.
+external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
+.PHONY : external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule
+
+# Convenience name for target.
+SDL3_ttf-shared: external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/rule
 .PHONY : SDL3_ttf-shared
 
 # codegen rule for target.
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=79,80 "Finished codegen for target SDL3_ttf-shared"
-.PHONY : vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
+external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=90,91 "Finished codegen for target SDL3_ttf-shared"
+.PHONY : external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/codegen
 
 # clean rule for target.
-vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
-.PHONY : vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
-
-#=============================================================================
-# Target rules for target vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir
-
-# All Build rule for target.
-vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all: vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/all
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build.make vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build.make vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=96 "Built target harfbuzz"
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all
-
-# Build rule for subdir invocation for target.
-vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/rule
-
-# Convenience name for target.
-harfbuzz: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/rule
-.PHONY : harfbuzz
-
-# codegen rule for target.
-vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build.make vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=96 "Finished codegen for target harfbuzz"
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/codegen
-
-# clean rule for target.
-vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build.make vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/clean
-.PHONY : vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/clean
-
-#=============================================================================
-# Target rules for target vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir
-
-# All Build rule for target.
-vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/all:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build.make vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build.make vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=87,88,89,90,91,92,93,94,95 "Built target freetype"
-.PHONY : vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/all
-
-# Build rule for subdir invocation for target.
-vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/rule
-
-# Convenience name for target.
-freetype: vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/rule
-.PHONY : freetype
-
-# codegen rule for target.
-vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build.make vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=87,88,89,90,91,92,93,94,95 "Finished codegen for target freetype"
-.PHONY : vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/codegen
-
-# clean rule for target.
-vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build.make vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/clean
-.PHONY : vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/clean
-
-#=============================================================================
-# Target rules for target vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir
-
-# All Build rule for target.
-vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build.make vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build.make vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=97,98,99 "Built target plutovg"
-.PHONY : vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all
-
-# Build rule for subdir invocation for target.
-vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/rule
-
-# Convenience name for target.
-plutovg: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/rule
-.PHONY : plutovg
-
-# codegen rule for target.
-vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build.make vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=97,98,99 "Finished codegen for target plutovg"
-.PHONY : vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/codegen
-
-# clean rule for target.
-vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build.make vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/clean
-.PHONY : vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/clean
-
-#=============================================================================
-# Target rules for target vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir
-
-# All Build rule for target.
-vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all: vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/all
-vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all: vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/all
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build.make vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build.make vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num= "Built target plutosvg"
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all
-
-# Build rule for subdir invocation for target.
-vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brasi/projects/xencoder/build/CMakeFiles 0
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/rule
-
-# Convenience name for target.
-plutosvg: vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/rule
-.PHONY : plutosvg
-
-# codegen rule for target.
-vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build.make vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num= "Finished codegen for target plutosvg"
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/codegen
-
-# clean rule for target.
-vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build.make vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/clean
-.PHONY : vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/clean
+external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
+.PHONY : external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

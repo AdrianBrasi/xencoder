@@ -65,26 +65,6 @@ CMAKE_BINARY_DIR = /home/brasi/projects/xencoder/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/brasi/projects/xencoder/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-.PHONY : package_source/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -104,51 +84,6 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"headers\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -183,6 +118,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named imgui
+
+# Build rule for target.
+imgui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui
+.PHONY : imgui
+
+# fast build rule for target.
+imgui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+.PHONY : imgui/fast
+
+#=============================================================================
 # Target rules for targets named xencoder
 
 # Build rule for target.
@@ -205,7 +153,7 @@ SDL3-shared: cmake_check_build_system
 
 # fast build rule for target.
 SDL3-shared/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/build
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3-shared.dir/build.make external/SDL/CMakeFiles/SDL3-shared.dir/build
 .PHONY : SDL3-shared/fast
 
 #=============================================================================
@@ -218,7 +166,7 @@ SDL3_test: cmake_check_build_system
 
 # fast build rule for target.
 SDL3_test/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/build
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL3_test.dir/build.make external/SDL/CMakeFiles/SDL3_test.dir/build
 .PHONY : SDL3_test/fast
 
 #=============================================================================
@@ -231,8 +179,21 @@ SDL_uclibc: cmake_check_build_system
 
 # fast build rule for target.
 SDL_uclibc/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/build
+	$(MAKE) $(MAKESILENT) -f external/SDL/CMakeFiles/SDL_uclibc.dir/build.make external/SDL/CMakeFiles/SDL_uclibc.dir/build
 .PHONY : SDL_uclibc/fast
+
+#=============================================================================
+# Target rules for targets named SDL3_image-shared
+
+# Build rule for target.
+SDL3_image-shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL3_image-shared
+.PHONY : SDL3_image-shared
+
+# fast build rule for target.
+SDL3_image-shared/fast:
+	$(MAKE) $(MAKESILENT) -f external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make external/SDL_image/CMakeFiles/SDL3_image-shared.dir/build
+.PHONY : SDL3_image-shared/fast
 
 #=============================================================================
 # Target rules for targets named SDL3_ttf-shared
@@ -244,60 +205,152 @@ SDL3_ttf-shared: cmake_check_build_system
 
 # fast build rule for target.
 SDL3_ttf-shared/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make vendored/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build
+	$(MAKE) $(MAKESILENT) -f external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build.make external/SDL_ttf/CMakeFiles/SDL3_ttf-shared.dir/build
 .PHONY : SDL3_ttf-shared/fast
 
-#=============================================================================
-# Target rules for targets named harfbuzz
+external/imgui/backends/imgui_impl_sdl3.o: external/imgui/backends/imgui_impl_sdl3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_sdl3.o
 
-# Build rule for target.
-harfbuzz: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 harfbuzz
-.PHONY : harfbuzz
+# target to build an object file
+external/imgui/backends/imgui_impl_sdl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdl3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_sdl3.cpp.o
 
-# fast build rule for target.
-harfbuzz/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build.make vendored/SDL_ttf/external/harfbuzz-build/CMakeFiles/harfbuzz.dir/build
-.PHONY : harfbuzz/fast
+external/imgui/backends/imgui_impl_sdl3.i: external/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_sdl3.i
 
-#=============================================================================
-# Target rules for targets named freetype
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_sdl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_sdl3.cpp.i
 
-# Build rule for target.
-freetype: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freetype
-.PHONY : freetype
+external/imgui/backends/imgui_impl_sdl3.s: external/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_sdl3.s
 
-# fast build rule for target.
-freetype/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build.make vendored/SDL_ttf/external/freetype-build/CMakeFiles/freetype.dir/build
-.PHONY : freetype/fast
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_sdl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_sdl3.cpp.s
 
-#=============================================================================
-# Target rules for targets named plutovg
+external/imgui/backends/imgui_impl_sdlrenderer3.o: external/imgui/backends/imgui_impl_sdlrenderer3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.o
 
-# Build rule for target.
-plutovg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plutovg
-.PHONY : plutovg
+# target to build an object file
+external/imgui/backends/imgui_impl_sdlrenderer3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdlrenderer3.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.cpp.o
 
-# fast build rule for target.
-plutovg/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build.make vendored/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/build
-.PHONY : plutovg/fast
+external/imgui/backends/imgui_impl_sdlrenderer3.i: external/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.i
 
-#=============================================================================
-# Target rules for targets named plutosvg
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_sdlrenderer3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
 
-# Build rule for target.
-plutosvg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plutosvg
-.PHONY : plutosvg
+external/imgui/backends/imgui_impl_sdlrenderer3.s: external/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.s
 
-# fast build rule for target.
-plutosvg/fast:
-	$(MAKE) $(MAKESILENT) -f vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build.make vendored/SDL_ttf/external/plutosvg-guild/CMakeFiles/plutosvg.dir/build
-.PHONY : plutosvg/fast
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_sdlrenderer3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+
+external/imgui/imgui.o: external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.o
+
+# target to build an object file
+external/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.cpp.o
+
+external/imgui/imgui.i: external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.i
+
+# target to preprocess a source file
+external/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.cpp.i
+
+external/imgui/imgui.s: external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.s
+
+# target to generate assembly for a file
+external/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.cpp.s
+
+external/imgui/imgui_draw.o: external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.o
+
+# target to build an object file
+external/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.cpp.o
+
+external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.i
+
+# target to preprocess a source file
+external/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.cpp.i
+
+external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+external/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.cpp.s
+
+external/imgui/imgui_tables.o: external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.o
+
+# target to build an object file
+external/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.cpp.o
+
+external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.i
+
+# target to preprocess a source file
+external/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.cpp.i
+
+external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+external/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.cpp.s
+
+external/imgui/imgui_widgets.o: external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.o
+
+# target to build an object file
+external/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.cpp.o
+
+external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+external/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.cpp.i
+
+external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+external/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -354,22 +407,32 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... package"
-	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... SDL3-shared"
+	@echo "... SDL3_image-shared"
 	@echo "... SDL3_test"
 	@echo "... SDL3_ttf-shared"
 	@echo "... SDL_uclibc"
-	@echo "... freetype"
-	@echo "... harfbuzz"
-	@echo "... plutosvg"
-	@echo "... plutovg"
+	@echo "... imgui"
 	@echo "... xencoder"
+	@echo "... external/imgui/backends/imgui_impl_sdl3.o"
+	@echo "... external/imgui/backends/imgui_impl_sdl3.i"
+	@echo "... external/imgui/backends/imgui_impl_sdl3.s"
+	@echo "... external/imgui/backends/imgui_impl_sdlrenderer3.o"
+	@echo "... external/imgui/backends/imgui_impl_sdlrenderer3.i"
+	@echo "... external/imgui/backends/imgui_impl_sdlrenderer3.s"
+	@echo "... external/imgui/imgui.o"
+	@echo "... external/imgui/imgui.i"
+	@echo "... external/imgui/imgui.s"
+	@echo "... external/imgui/imgui_draw.o"
+	@echo "... external/imgui/imgui_draw.i"
+	@echo "... external/imgui/imgui_draw.s"
+	@echo "... external/imgui/imgui_tables.o"
+	@echo "... external/imgui/imgui_tables.i"
+	@echo "... external/imgui/imgui_tables.s"
+	@echo "... external/imgui/imgui_widgets.o"
+	@echo "... external/imgui/imgui_widgets.i"
+	@echo "... external/imgui/imgui_widgets.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

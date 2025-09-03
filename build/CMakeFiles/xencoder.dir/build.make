@@ -112,9 +112,11 @@ xencoder: CMakeFiles/xencoder.dir/src/main.cpp.o
 xencoder: CMakeFiles/xencoder.dir/src/platform.cpp.o
 xencoder: CMakeFiles/xencoder.dir/build.make
 xencoder: CMakeFiles/xencoder.dir/compiler_depend.ts
-xencoder: libSDL3_ttf.so.0.3.0
-xencoder: libSDL3.so.0.3.0
-xencoder: /home/brasi/projects/xencoder/vendored/SDL/src/dynapi/SDL_dynapi.sym
+xencoder: external/SDL_image/libSDL3_image.so.0.3.0
+xencoder: external/SDL_ttf/libSDL3_ttf.so.0.3.0
+xencoder: libimgui.a
+xencoder: external/SDL/libSDL3.so.0.3.0
+xencoder: /home/brasi/projects/xencoder/external/SDL/src/dynapi/SDL_dynapi.sym
 xencoder: CMakeFiles/xencoder.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/brasi/projects/xencoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable xencoder"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xencoder.dir/link.txt --verbose=$(VERBOSE)
